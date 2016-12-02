@@ -10,7 +10,7 @@ import static DriverUtils.DriverUtils.getDriver;
 
     private By buyButton = By.cssSelector("span[onclick=\"getQuickCart('/product/id/50038/zippo-futbolka'); return false;\"]");
     private By price = By.cssSelector("span[class=\"price\"]");
-    private By elementForAssert = By.cssSelector("span[id=\"span_ok\"]");
+    private By elementForAssert = By.id("span_ok");
 
      void clickAddButton() {
         getDriver().findElement(buyButton).click();

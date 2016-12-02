@@ -14,7 +14,7 @@ import static DriverUtils.DriverUtils.getDriver;
         getDriver().get("http://www.red.ua/");
     }
 
-     void chooseMensTshirt() throws InterruptedException {
+     void chooseMensTshirt() {
         Actions action = new Actions(getDriver());
         action.moveToElement(getDriver().findElement(menLink)).build().perform();
         getDriver().findElement(mensTshirtLink).click();

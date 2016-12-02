@@ -12,7 +12,7 @@ import static DriverUtils.DriverUtils.getDriver;
     private By chosenTshirt = By.cssSelector("a[href=\"/product/id/49772/c-a-futbolka\"]");
     private By elementForAssert = By.cssSelector("a[href=\"/category/id/30/zhenskaja-odezhda/futbolki-tenniski-topy/futbolki-tenniski-topy/\"]");
 
-     void openWomensTshirt() throws InterruptedException {
+     void openWomensTshirt(){
         Actions action = new Actions(getDriver());
         action.moveToElement(getDriver().findElement(womenLink)).build().perform();
         getDriver().findElement(womensTshirtLink).click();

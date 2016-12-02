@@ -14,11 +14,11 @@ import static DriverUtils.DriverUtils.getDriver;
     private By sizeTshirt = By.cssSelector("label[for=\"39size\"]");
     private By buyButton = By.cssSelector("span[onclick=\"getQuickCart('/product/id/49772/c-a-futbolka'); return false;\"]");
     private By price = By.cssSelector("span[class=\"price\"]");
-    private By elementForAssert = By.cssSelector("span[id=\"span_ok\"]");
+    private By elementForAssert = By.id("span_ok");
     private By elementForAssertBuy = By.xpath("//span[.=\"SR0418899-081116\"]");
 
 
-     void chooseSizeAndClickAddBuntton() throws InterruptedException {
+     void chooseSizeAndClickAddBuntton(){
         getDriver().findElement(sizeTshirt).click();
         (new WebDriverWait(getDriver(), 5000)).until(ExpectedConditions.textToBePresentInElement(getDriver().findElement(elementForAssertBuy), "SR0418899-081116"));
         getDriver().findElement(buyButton).click();

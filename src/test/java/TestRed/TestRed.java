@@ -14,7 +14,7 @@ public class TestRed {
     }
 
     @Test
-    public void RedPurchasingTest() throws InterruptedException {
+    public void RedPurchasingTest(){
 
         int totalPrice = 0;
         FrontPage front = new FrontPage();
